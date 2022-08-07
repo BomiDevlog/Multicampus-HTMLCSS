@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22선택자.html</title>
+    <style type="text/css">
+        /*1. 태그 선택자*/
+        div{
+            color:darkslateblue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20pt; /*인쇄할때 포인트 단위가 용이함*/
+        }
+        
+            /*2. 클래스 선택자 : 앞에 마침표(.)를 붙인다.
+                .클래스명{속성명: 값...}
+                class가 c1인 요소를 선택해서
+                글자색, 배경색 지정.
+                안쪽여백 1em, 바깥여백 1.2em
+            */
+            
+        .c1{
+            color:cadetblue;
+            padding: 1em;
+            margin: 1.2em;
+            background-color: blanchedalmond;
+        }
+        .c2{
+            border: thick green dashed;/*thick은 약 3px가량, solid실선, dashed긴 점선*/
+            /*color: yellow;  클래스 적용중복되면 더 아래의 것(더 최신의 것)으로 적용됨*/
+        }
+        /* id가 dv1인 요소를 선택해서 배경색, 글자색 지정. 글자크기 1.5em
+        */
+        #dv1{
+            background-color: turquoise;
+            color:rebeccapurple;
+            font-size: 1.5em;
+        }
+        #dv2{
+            color: darksalmon;
+            font-weight: bold;
+        } /*클래스보다 아이디가 우선순위 높다. 우선적용*/
+
+        /*우선순위: 아이디선택자(#dv1) > 클래스선택자(.c1) > 태그선택자(div)*/
+
+        a{
+            font-style: italic; /*italic, oblique는 기울인 글씨*/
+            color:red;
+            text-decoration: none; /*링크의 밑줄없애는 것*/
+        }
+
+        /*div안에 있는 a태그에 대해 배경색 navy 글자색 white로 주세요*/
+        div a{
+            background-color: navy;
+            color:white;
+        }/*div안에 h2안에 a있으니까 계층선택자에서 자손을 적용하도록 띄어쓰기로 연결
+       
+        =>선택자  자손선택자 : 특정 요소 안에 포함된 모든 자손 요소를 선택
+        */
+
+    </style>
+</head>
+<body>
+    <!-- div*5엔터 -->
+    <!-- id (identity) : 한 페이지 내에서 unique한 값을 가져야 한다.
+        class : 한 페이지 내에서 동일한 이름의 클래스가 여러  개 나와도 된다.
+     -->
+     <h1>ID선택자(selector), class 선택자, 태그 선택자</h1>
+    <div id="dv1">div1 #dv1</div>
+    <div id="dv2" class="c1">div2 .c1 #dv2</div>
+    <div class="c1 c2">div3 .c1 c2</div> <!--c1, c2 클래스 둘다 적용-->
+    <div class="c2">div4 .c2</div>
+    <div id="div5">div5 #dv5</div>
+    <hr color="crimson">
+    이것은 <a href="http://www.daum.net">단순링크</a>입니다
+    <br>
+    <div>
+        div 태그 안에서 
+        <h2><a href="21인라인스타일정의.html">CSS3.0예제</a>에 링크를 겁니다</h2>
+    </div>
+</body>
+</html>

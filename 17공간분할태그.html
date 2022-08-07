@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17공간분할태그.html</title>
+    <!-- CSS와 같이 쓰이는 편. head태그 안에 style을 준다 -->
+    <style>
+        div{
+            border: 2px solid wheat; 
+            /*테두리: 두께 스타일(실선) 색상*/
+            /*block요소는 해당 층 전체가 테두리*/
+            margin: 10px;/*바깥여백*/
+            padding: 10px; /*안쪽여백*/
+            width: 200px;
+            height : 80px;
+            background-color: darkcyan; /*배경색*/
+            color: burlywood; /*글자색*/
+        }
+        span{
+            border: 2px solid skyblue; 
+            /*1px solid skyblue해보기/ 8px 마진 해보기*/
+            /*inline요소는 해당 글자만큼만 테두리*/
+            margin: 12px 8px; /*상하:12, 좌우8  (근데 지금 적용안됨;)/ 양쪽글자간의 거리는 16px이 된다*/
+            padding: 8px; /*안쪽여백*/
+            display: inline-block;
+            width: 200px;
+            height : 80px;
+            background-color: rgb(252, 235, 242) ; 
+            color: magenta;
+        }
+        /*  inline 요소들을 width, height속성이 적용되지 않는다. (기본으로 display: inline 상태)
+            display속성 값으로 inline-block을 주면 width, height가 적용된다.
+        */
+    </style>
+</head>
+<body>
+    <h1>공간분할태그 (div, span)</h1>
+    <!--div : 블럭요소 (세로 수직으로 층층이 쌓임)-->
+    <!-- div*3 엔터 -->
+    <div>하늘</div>
+    <div>바다</div>
+    <div>산</div>
+
+    <hr color="red">
+    <!-- span : 인라인요소 ( 가로 수평으로 쌓임) -->
+    <!-- span*4엔터 -->
+    <span>봄</span>
+    <span>여름</span>
+    <span>가을</span>
+    <span>겨울</span>
+</body>
+</html>

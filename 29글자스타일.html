@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>29글자스타일.html</title>
+    <style>
+        body{
+            font-family: 궁서체, sans-serif;
+            font-size: large;
+            /* xx-small, x-small, small, medium, large, x-large, --xx-large 
+            글자 크기 단위 (px, pt, em, rem) */
+            font-style: oblique; /*기울임: normal, italic, oblique*/
+            font-weight: bolder; /*굵기: 100~900, bold, bolder, lighter*/
+            color:midnightblue;
+            /*text-align: center;*/ /*정렬방식: left, center, right*/
+        }
+        #a1{
+            text-transform: capitalize; /*첫글자만 대문자*/
+        }
+        #a2{
+            text-transform: uppercase; /*모두 대문자*/
+        }
+        #a3{
+            text-transform: lowercase; /*모두 소문자*/
+        }
+    </style>
+</head>
+<body>
+    <h1>글자 또는 텍스트 스타일</h1>
+    <h2>기본</h2>
+    <h2 style="text-decoration:overline">윗줄</h2>
+    <h2 style="text-decoration:underline">밑줄</h2>
+    <h2 style="text-decoration:line-through">취소선</h2>
+    일반 텍스트
+    <hr>
+    <h1 style="color:teal; text-shadow:4px 2px 2px orange">안녕 CSS - TEXT Shadow</h1>
+    <!-- text-shadow: x좌표, y좌표, 번짐크기, 색상 -순서로 지정 =>  그림자효과 -->
+    <!--번짐크기의 숫자가 10px 크면 흩어져서 그림자가 연하고 2px 숫자가 작으면 모여서 그림자가 진함  -->
+    <!-- table>tr>td*2엔터 : 2열짜리 표, tr복사해서 아래에 붙여 2행만듬 즉 2행2열 테이블-->
+    <table border="1" style="width:80%; height:400px;margin:auto"> 
+        <!--margin:auto하면 자동조정해서 중앙에 위치함.-->
+        <tr>
+            <td width="50%" style="vertical-align:bottom">수직정렬</td>
+            <!-- <td width="50%"> 양쪽이 균등한 칸으로 배분됨-->
+                <!--수직정렬 vertical-align: top, middle(디폴트), bottom 
+                    수평정렬 text-align : left(디폴트), center, right-->
+            <td style="text-align:right">수평정렬</td>
+        </tr>
+        <tr>
+            <td>
+                <div id="a1">abc(첫글자를 대문자로)</div>
+                <div id="a2">abc(모두 대문자로)</div>
+                <div id="a3">abcDEF(모두 소문자로)</div>
+            </td>
+            <td>
+                문자간격<br>
+                <span style="color:brown; letter-spacing:10px">문자간격</span><br>
+                <span style="color:green; word-spacing:20px">단어 간격</span>
+            </td>
+        </tr>
+    </table>
+    <br><br><br><br><br><br><br><br><br><br>
+    <!-- br*10 엔터 - 브라우저 아래쪽이라서 올려서 보려고ㅎ -->
+
+</body>
+</html>

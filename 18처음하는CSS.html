@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18처음하는CSS.html</title>
+    <style type="text/css">
+        /*선택자 {속성명: 속성값; ...}
+       
+        전체선택자 * : 모든 요소를 선택하겠다
+        */
+        *{
+            color:tomato;/*글자색*/
+        }
+        body{
+            padding: 50px;/*안쪽여백*/
+            font-family: Verdana, Geneva, Tahoma, sans-serif; /*폰트설정. 앞에서부터 적용하고 없으면 다음것 적용*/
+            font-size: 20px;
+        }
+        /*b태그를 선택해서 글자색blue, 글자크기32px, 배경색beige*/
+        b{
+            color: blue;
+            font-size: 32px;
+            background-color: chocolate;
+        }
+
+    </style><!--style 내에서는 CSS문법을 따른다-->
+</head>
+<body>
+    <!-- <CSS로 스타일을 정의하는 방법> 4가지
+        [1] style태그로 파일 내부에 정의하는 방법
+        [2] 외부파일에 정의한 뒤 참조하는 방법=> link태그    *많이 쓰는 방식!
+        [3] 외부파일을 import하는 방법 => @import
+        [4] 인라인 스타일로 정의하는 방법
+     -->
+
+    <div>
+        안녕하세요<br>
+        <b>CSS3.0</b>을 배워봅시다.
+        <p>
+            HTML의 보완적 요소가 CSS입니다
+            <b>Hello CSS 3.0</b>
+        </p>
+    </div>
+    
+</body>
+</html>
+
+
+<!-- 18처음하는CSS.html -->

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30배경스타일.html</title>
+    <style>
+        body{
+            color:rgba(50%,30%,90%,1)
+            /*rgba => red, green, blue, alpha(투명도)   
+                                        0:투명 ~ 1:불투명 */
+        }
+        span{
+            padding:1em;
+            color:darkblue;
+        }
+        span.sky{
+            background-color: skyblue;
+        }
+        .pink{
+            background-color: deeppink;
+        }
+        /* td태그에 대해 배경색 주기: 노랑 */
+        table>tbody>tr>td{
+            /* background-color: lemonchiffon; */
+            background-image: url(images/icon_home.png); /*td 1칸마다 이미지가 들어감. 작은이미지의 경우 반복해서 나옴*/
+            background-repeat: repeat; /*repeat 이미지 반복(디폴트)*/
+        }   
+        /*td{
+            background-color: lemonchiffon;
+        }적용잘됨
+
+         table>tr>td{
+            background-color: lemonchiffon;
+        }적용안됨
+
+        *브라우저 테이블위에서 오른마우스 검사
+        => table>tbody>tr>td로 구성되어있는 것을 발견
+
+        table>tbody>tr>td{
+            background-color: lemonchiffon;
+        } 적용잘됨
+        */
+        td#x{/*td에서 id=x인 것*/
+            background-repeat: repeat-x; /*x축으로 이미지 반복*/
+        }
+        td#y{
+            background-repeat: repeat-y; /*y축으로 이미지 반복*/
+        }
+        td#z{
+            background-repeat: no-repeat; /*이미지 반복 없음*/
+        }
+
+        td.a, #x2, #y2, #z2{
+            background-repeat: no-repeat;
+        }
+        td.a{
+            background-position: left top; /*디폴트*/
+        }
+        td#x2{
+            background-position: right bottom;
+        }
+        td#y2{
+            background-position: 50% 50%;/*center center 와 같음*/
+        }
+        td#z2{
+            background-position: 50px 50px;
+        }
+        /* textarea에 대해 아래 스타일을 적용하세요
+            글자크기: 1.2em;
+            배경이미지: 알아서
+            배경이미지: 반복하지 않도록
+            이미지를 중앙에 위치시키세요
+            테두리: 2px solid 색상알아서
+        */
+    .txt{ /*textarea{ 로 시작해도 됨*/
+        font-size: 1.2em;
+        background-image: url(images/icon_mypage.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;/*background-position: center;*/
+        border : 2px solid aquamarine;
+        background-attachment: local;
+        /*scroll(디폴트) 이미지가 고정되어있음 local 스크롤에 따라 이미지가 따라 올라감*/
+    }
+    /*textarea:focus{
+        border : 2px solid aquamarine;
+    }*/
+    /*textarea를 누르니까 보더색상이 사라짐 이 부분은 다시 답변준다고 하심 */
+    </style>
+</head>
+<body>
+  <h1>배경 관련 스타일</h1>
+  <span class="sky">배경색 적용하기1</span>
+  <span class="pink">배경색 적용하기2</span>
+
+  <h2 class="sky">배경에 이미지 적용하기</h2>
+
+  <table border="1" height="400px" width="100%">
+  <tr>
+	<td width="25%">repeat</td>
+	<td width="25%" id="x">repeat-x</td>
+	<td width="25%" id="y">repeat-y</td>
+	<td width="25%" id="z">no-repeat</td>
+  </tr>
+  <tr>
+	<td width="25%" class="a">기본 위치는 left, top</td>
+	<td width="25%" id="x2">right-bottom</td>
+	<td width="25%" id="y2">50% 50%</td>
+	<td width="25%" id="z2">50px 50px</td>
+  </tr>
+  </table>
+  <hr color="red">
+	<textarea class="txt" rows="10" cols="50">안녕하세요?</textarea>
+    <br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>

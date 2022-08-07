@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--디바이스장치가 바뀌어도(스마트폰에서도) 내용이 모두 들어가도록 화면에 맞춰주겠다는 의미-->
+    <title>07이미지태그.html</title>
+</head>
+<body>
+    <h1>이미지 태그 -img 태그. (단독태그. inline요소)</h1>
+    <!-- 속성 : src, alt, width, height, title -->
+    <img src="./images/flower1.jpg" width="200px" 
+         alt="대체설명" title="아름답고 붉은 꽃">
+    <!-- width 폭 height높이 
+        alt 대체설명 (파일명 잘못되었을때 나오는 글)- alt꼭쓰기
+        title 마우스가져다대면 나오는 제목 -->
+    <img src="./images/flower.jpg" width="50%"
+         alt="흰 데이지 꽃 사진입니다">
+    <img src="images/flower3.jpg" width="200px"
+         alt="벚꽃사진">
+    <!-- 상대경로 -->
+
+    <img src="file:///C:/Users/PC/Pictures/24Hgyaq5O0p.jpg">
+    <!-- 절대경로. 서버로 연동하면 엑박 나오는데, WEB의 파일을 확인하면 나옴 -->
+    <hr>
+    
+    <img src="http://image.yes24.com/goods/109888114/XL" 
+         width="20%" alt="yes24에서 검색한 도서">
+    <br> <!-- inline 이라 br로 줄바꿈해야함-->
+    <figure>
+        <a href="http://www.yes24.com"><img src="images/flower4.jpg" with="50%"></a>  
+       <!-- a 뒤에 href로 이미지를 누르게되면 이동할 링크를 달아준다.-->
+        <figcaption>아름다운 튤립 꽃 이미지입니다</figcaption>
+         <!-- 이미지 아래 캡션달기-->
+    </figure>
+        
+       
+    
+ 
+
+</body>
+</html>
+<!-- 07이미지태그.html -->

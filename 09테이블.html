@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09테이블.html</title>
+</head>
+<body>
+    <h1>테이블 태그(3행2열)</h1>
+    <!-- tr : 행태그 table row
+         td : 열태그 table data    -->
+    
+    <table border="1" bordercolor="navy" 
+    bgcolor="gold" cellspacing="30"
+    cellpadding="20" align="center"
+    background="images/flower2.jpg"
+    width="400px" height="300px" style="color: white">
+            <!--테두리두께를 1px로 주겠다/
+            bgcolor 배경색 beigh 등. 그림널으니 배경색가려짐/ cellspacing 셀간격 픽셀단위/
+            cellpadding 셀의 안쪽여백/align 테이블의 위치를 중앙으로
+            style 글자색상. css에서 추가할수도있음.
+            
+            *빨간글씨는 HTML5에서 더이상 쓰지않는 기능이라서. 나중에 style해서 css로 대치하면 됨.
+        -->
+        <!-- 1행 -->
+        <tr>
+            <td>1행1열</td>
+            <td>1행2열</td>
+        </tr>
+        <!-- 2행 -->
+        <tr>
+            <td>2행1열</td>
+            <td>2행2열</td>
+        </tr>
+        <!-- 3행 -->
+        <tr>
+            <td>3행1열</td>
+            <td>3행2열</td>
+        </tr>
+    </table>
+    <hr>
+
+    <!-- 3행 4열 -->
+    <table border="1" width="80%" height="200" align="center"> 
+        <!--80%하면 브라우저의 80퍼비율-->
+        <thead>
+            <tr bgcolor="#3289af"><!--16진수로 색지정: 32레드 89그린 af블루--> 
+                <!--tr에 열전체에 색지정-->
+                <!--4열이니까 tr내에 td4개--> <!--10%하면 table(표)의 10퍼비율-->
+                <th width="10%">번호</th>
+                <th width="20%">이름</th>
+                <th width="20%">연락처</th>
+                <th width="50%">주소</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr> 
+                <td>1</td>
+                <td bgcolor="hotpink" style="color:aqua">홍길동</td> <!--td에 셀마다 색지정-->
+                <td>010-1111-2222</td>
+                <td>부산시 남구</td>
+            </tr>
+            <tr> 
+                <td>2</td>
+                <td background="images/icon_home.png" style="color:brown">김철수</td>
+                <td>010-2111-2222</td>
+                <td>부산시 동래구</td>
+            </tr>
+            <tr> 
+                <td>3</td>
+                <td>이동휘</td>
+                <td>010-3111-2222</td>
+                <td>인천시</td>
+            </tr>
+        </tbody>
+        <tfoot>
+           <caption>회원주소록</caption> 
+        </tfoot>
+    </table>
+
+</body>
+</html>

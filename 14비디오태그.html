@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14비디오태그.html</title>
+</head>
+<body>
+    <h1>비디오 재생</h1>
+    <video preload="metadata" width="50%" controls 
+    poster="audios/apple.jpg" autoplay="autoplay" muted>
+        <!-- 미리재생(비디오는 용량크니까 메타데이터만큼만), 
+            포스터(썸네일지정) ,   
+            autoplay 자동재생인데 autoplay만 쓰면 작동안되고 muted 같이 써야함. muted는 소리안나게.-->
+        <source src="audios/The Simpsons.mp4"> 
+
+    </video>
+    
+</body>
+</html>

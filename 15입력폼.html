@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15입력폼.html</title>
+</head>
+<body>
+    <h1>form 양식</h1>
+    <p> form 태그는 사용자가 입력한 값들을 웹서버에 전달하고자 할 때 사용한다
+        <br>
+        form 태그 안에는 다양한 입력 양식들이 올 수 있는데,
+        이들을 form control 이라고 한다.
+    </p>
+    <hr color="red">
+    <!-- form태그의 속성
+	1) name, id : 폼을 식별할 수 있는 이름
+	2) action : 폼 양식을 처리해줄 서버 페이지를 기술한다.
+	3) method : 데이터 전송방식을 기술한다. 주로 get아니면 post를 기술한다. 이외에도  put, delete 등이 있음
+			get방식은 간단한 데이터 전송시 사용한다.=> 사용자가 입력한 값이 url부분에 노출됨
+            post방식은 대용량의 데이터 전송시 사용 => 데이터가 노출되지 않는다.
+    4) enctype : 인코딩 방식을 지정한다.
+				파일 업로드시는 multipart/form-data를 지정해야 한다. (실제로 파일데이터가 서버에 전송됨!)
+                application/x-www-form-urlencoded==>디폴트 (파일첨부시 파일명만 전송됨)
+
+        자바의 예시.
+        http://localhost:8080/join.jsp?name=test&userid=aaa&pwd=1111&photo=&gender=Male
+		&hobby=sports&hobby=movie
+
+        Get방식의 요청일 때 => 데이터가 url에 그대로 노출됨
+        http://127.0.0.1:5500/join?userid=asdf&pwd=123
+        http://127.0.0.1:5500/join?userid=1&pwd=1&photo=&gender=Male&hobby=Sports&hobby=Movie
+        get방식 요청일 때는 입력 데이터를 query string으로 url부분에 포함시켜서 서버에 전송한다.
+        (*query string: ?이하의 부분. userid=asdf&pwd=123)
+
+
+        Post방식의 요청일 때 
+        http://127.0.0.1:5500/join
+        (개인정보 노출되면 안되니 로그인, 회원가입 페이지에 get방식 안되고, 반드시 post방식 적용.)
+	-->
+    <form name="frm" id="frm" action="join" method="get" 
+    enctype="application/x-www-form-urlencoded">
+        <!-- name과 id를 대개 같이 준다. 자바스크립트에서 활용할 수있다.
+        action에는 서버페이지를 기술하는데, 회원가입 페이지를 예시로 작성중이다. 
+        method에 get, post 방식의 url차이 다시 확인하기.
+        *파일 전송하려면 method="post" enctype="multipart/form-data" 해야함
+        -->
+
+        아이디: <input type="text" name="userid"><br><!--input type="text" 한줄짜리 텍스트 필드-->
+        비밀번호: <input type="password" name="pwd"><br><!--input type="password" 비밀번호가리는 효과-->
+        회원사진: <input type="file" name="photo"><br>
+        <!--get방식일때는 파일명만 전송되고 파일전송안됨. 실제로 서버에 파일첨부하려면 post방식으로 해야함-->
+        성별: <label><input type="radio" name="gender" value="Male">남자</label>
+        <label><input type="radio" name="gender" value="Female" checked> 여자 <br></label>
+        <!-- 단일선택: radio 이 때 동일한 name일 경우 그 중 1개만 선택함 (예. 성별) -->
+        <!-- 다중선택: checkbox    /name은 동일. (예. 사용가능한 언어, 취미) -->
+        <!-- <label>로 감싸면 '남자' 글자만 눌러도 선택됨. 라디오나 체크박스는 라벨로 감싸면 사용자가 더 편함 -->
+       <!-- radio나 checkbox에서 checked 를 설정하면 기본적으로 체크되어있음. checked 안쓰면 아무 체크안된 상태로 나옴. -->
+            <!--radio에선 name이 중요
+        name="" 해놓으니 둘다 선택가능함
+        name="gender" 같으니 단일선택
+        name="gender1"/"gender2" 다르니 둘다선택 가능. 
+        -->
+        취미: 
+        <label>
+            <input type="checkbox" name="hobby" value="Sports" checked >운동
+        </label>
+        <label>
+            <input type="checkbox" name="hobby" value="Reading">독서
+        </label>
+        <label>
+            <input type="checkbox" name="hobby" value="Movie">영화감상
+        </label><br>
+        <!-- checkbox에 동일한 name으로 설정. 다중선택 가능 -->
+        드롭다운 리스트:
+        <select name="job"><!--드롭다운리스트에서는 단일 선택.-->
+            <option>::직업을 선택하세요::</option>
+            <option value="Developer" selected >개발자</option> <!--select에서는 selected하면 기본선택됨. 안쓰면 맨위에 쓴게 기본값됨.-->
+            <option value="Designer">디자이너</option><!-- value에는 전송할 서버를 기술.-->
+            <option value="Manager">운영자</option>
+        </select><br>
+        <!-- select : 기본은 단일선택.
+             multiple 속성을 주면 다중 선택이 가능하다.
+             size 속성을 주면 펼친 형태가 된다. -->
+        <!-- select>option*4 엔터 -->
+        <select name="lang" id="lang" size="4" multiple> <!--대게 name과 id는 동일한 값을 설정한다-->
+            <option value="">::사용 가능한 언어::</option><!--multiple한뒤. Ctrl누르고 다중 선택가능-->
+            <option value="Java">Java</option>
+            <option value="HTML">HTML</option>
+            <option value="SQL">SQL</option>
+        </select><br>
+        자기소개: 
+        <textarea name="intro" rows="5" cols="70"></textarea><br> <!--멀티라인 텍스트에리어-->
+        히든필드: <!--감춰서 보내야하는 정보-->
+        <input type="hidden" name="secret" value="TopSecret"><br> <!--눈에 보이지않지만 TopSecret이라는 글자가 전송됨-->
+        <!--브라우저에서 오른마우스->페이지 소스보기(원본보기)를 눌러서 정보확인가능-->
+        <!--개발자가 사용자모르게 보내야하는 데이터 (예를 들어 mode=dev 개발모드 등)를 보낼때 hidden으로 보냄-->
+         <input type="submit" value="회원가입">
+         <!-- submit버튼은 form태그 안에 넣으면 서버페이지로 데이터를 전송한다. -->
+         <input type="reset" value="다시쓰기">
+         <!-- reset : 입력값을 초기화한다. -->
+         <input type="button" value="일반버튼" onclick="alert('반갑습니다!')">
+         <!--input type="button" 기능없이 모양만 버튼인 것. 이벤트를 붙여 기능을 만들어줄 수 있음
+        동적인 처리는 자바스크립트로.
+        alert(경고)는 dialog메시지창이 뜬다
+        -->
+    </form>
+
+</body>
+</html>
+<!-- 15입력폼.html : HTML5이전 부터 있었던 form양식 -->

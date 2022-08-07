@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃_김보미</title>
+    <style>
+
+        .notice_frame{
+            border: 1px solid skyblue;
+            margin: 20px 20px;/*바깥여백: 상하 20px 좌우50px // 50px만 쓰면 상하좌우모두 여백적용됨*/
+            padding: 20px;
+            width:65%;
+            float:left;
+        }
+         .notice{
+            color: navy;
+            border: 1px solid skyblue;
+            margin: 20px 20px;/*바깥여백: 상하 20px 좌우50px // 50px만 쓰면 상하좌우모두 여백적용됨*/
+            padding: 20px;
+            width:30%;
+            float:left;
+        }
+        .bx{
+            clear:both;
+        }
+        .title{
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .menu_frame{
+            border: 1px solid skyblue;
+            color: gray;
+            margin: 20px 20px;/*바깥여백: 상하 20px 좌우50px // 50px만 쓰면 상하좌우모두 여백적용됨*/
+            padding: 20px;
+            width:30%;
+            
+        }
+    </style>
+</head>
+<body>
+    
+
+
+    <img src="images/naver_menu.png" usemap="#img_map">
+   
+    <map name="img_map">
+        <area shape="rect" coords="3,1,60,25" href="http://www.naver.com">
+        <area shape="rect" coords="85,1,145,25" href="https://nid.naver.com/user2/V2Join?m=agree&lang=ko_KR&cpno=">
+        <area shape="rect" coords="165,1,235,25" href="https://nid.naver.com/nidlogin.login?mode=form&url=https%3A%2F%2Fwww.naver.com">
+        <area shape="rect" coords="250,1,315,25" href="https://section.blog.naver.com/BlogHome.naver?directoryNo=0&currentPage=1&groupId=0">
+    </map>
+
+    <br>
+
+    <div class="notice_frame">
+        <div class="notice">
+            <div class="title">공지사항1</div>
+            <div>어쩌구 저쩌구...</div>
+            <div>어쩌구 저쩌구...</div>
+            <div>어쩌구 저쩌구...</div>
+        </div>
+        <div class="notice">
+            <div class="title">베스트글</div>
+            <div>어쩌구 저쩌구...</div>
+            <div>어쩌구 저쩌구...</div>
+            <div>어쩌구 저쩌구...</div>
+        </div>
+        <p class="bx"></p>
+        <hr color="white" width:60%>
+        <div class="notice">
+            <div class="title">공지사항2</div>
+            <div>어쩌구 저쩌구...</div>
+            <div>어쩌구 저쩌구...</div>
+            <div>어쩌구 저쩌구...</div>
+        </div>
+        <div class="notice">
+            <div class="title">공지사항3</div>
+            <div>어쩌구 저쩌구...</div>
+            <div>어쩌구 저쩌구...</div>
+            <div>어쩌구 저쩌구...</div>    
+        </div>
+    </div>
+
+    <div class="menu_frame">
+        <div>Menu1</div>
+        <div>Menu2</div>
+        <div>Menu3</div>
+        <div>Menu4</div>
+    </div>
+
+</body>
+</html>
+
+<!-- swanbaek@naver.com 으로 실습예제 보내주세요
+ -->
