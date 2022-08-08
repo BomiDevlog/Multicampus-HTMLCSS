@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>39div텍스트정렬.html</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+        }
+        #mydiv{
+            text-align: center;
+            /*vertical-align: middle;*//*table에서 적용되지만 div에서 적용안됨*/
+            line-height:300px; /*한줄일때는 가장 간단하게 수직정렬할 수 있다*/
+            /*div높이와 같은 line높이를 적용해 수직정렬만듬 
+            콘텐츠가  한줄이니까 가운데정렬이지만 여러줄일떄는 이 상황이 적용안됨
+            부모div로 하나더 감싸서 display로 table, table-cell로 만듬*/
+            border: 1px dashed rgb(240, 169, 250);
+        }
+        #mytab{
+            border: 2px solid tomato;
+            margin-top: 1em;
+            display: table;
+        }
+        #mycell{
+            display: table-cell;/*td가 되는 효과가 생김*/
+            text-align: center;
+            vertical-align: middle;/*여러줄이 배치되어도 중앙에 배치*/
+        }
+        #mytab2{
+            background-color: burlywood;
+            margin-top: 1em;
+            border: 1px solid darkgreen;
+            display: none; /*안보이고, 차지하던 영역도 사라짐*/
+            /* block요소로 주면 다시 나타남 => 아래에서 자바스크립트로 만듬 */
+        }
+        #mydiv2{
+            background-color: magenta;
+            visibility: hidden;/*안보이지만, 차지하던 영역은 그대로 남아있음*/
+        }
+        #mydiv{
+            opacity: 0.5;
+            /* 투명도: 0(투명), 1(불투명)
+            0으로 주면 투명해서 안보이지만, 차지하던 영역은 그대로 남아있음 */
+        }
+    </style>
+</head>
+<body>
+    <div id="mydiv" class="">
+        가나다라마바사
+    </div>
+    <div id="mydiv2" class="">
+        가나다라마바사
+    </div>
+
+    <div id="mytab" class="">
+        <div id="mycell">
+            자차카타파하 <br>
+            자차카타파하<br>
+            자차카타파하
+        </div>
+    </div>
+    
+    <div id="mytab2" class="">
+        <div id="mycell2">
+                자차카타파하
+        </div>
+    </div>
+
+    <h1 onclick="show()">안녕하세요</h1>
+    <script>
+        function show(){
+            var obj=document.getElementById('mytab2') 
+            // 문서영역에서 id가 mytab2인 요소를 찾아서 반환해서 변수에 할당
+            // alert(obj) // obj를 출력하는 메시지
+            obj.style.display='block';
+            //display none이었던 것이 block요소로 바뀌면서 다시 등장함
+
+            var obj2=document.getElementById('mydiv2') 
+            obj2.style.visibility='visible';
+
+            var obj3=document.getElementById('mydiv') 
+            obj3.style.opacity='1';
+        }
+    </script>
+    
+</body>
+</html>

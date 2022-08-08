@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>38포지션_fixed.html</title>
+    <style>
+        body{
+            margin:0;
+        }
+        .fixed-box{
+            position:fixed; /* fixed는 웹브라우저 기준. 두 div가 겹쳐진 형태가 되고 div크기가 글자크기만큼만 설정됨.*/
+            color:#e55c3c;
+            background-color: rgb(66, 30, 124);
+            font-weight: bold;
+            text-align: center;            
+        }
+        .sidebar{
+            width: 50px;
+            height: 100%; /*왼쪽에 사이드바 형성됨*/
+            top:0;
+            right:0;/*왼쪽이 기본. 오른쪽에 바가 형성됨*/
+            padding-top: 100px; /*글자가 100px아래로 내려옴*/
+        }
+        .footer{
+            width:100%;
+            height: 50px;
+            /*vertical-align: middle;*//*테이블에선 글자가 중앙으로 오는데 div에서 적용안됨*/
+            line-height: 50px; /*글자라인의 높이를 height와 같이 50px로 지정하니 가운데 높이로 온다.*/
+            left:0;
+            bottom:0;/*위에가 기본. 아래에 바가 형성됨*/
+        }
+    </style>
+</head>
+<body>
+    <div class="fixed-box sidebar">
+        fixed box (side-bar)
+    </div>
+    <div class="fixed-box footer">
+        fixed box (footer)
+    </div>
+    
+</body>
+</html>

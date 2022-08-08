@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>45시맨틱레이아웃.html</title>
+    <!-- 45layout.css 참조하기 -->
+    <link rel="stylesheet" type="text/css" href="45layout.css">
+    <!-- 웹폰트 참조하기 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="wrap" class="countainer"> 
+        <!-- 헤더: 로고이미지, 검색폼, 목차 등이 모여있음 ----------->
+        <header>
+            <!-- 헤더 영역 -->
+            <a href="#"><img src="images/logo_main.png"></a>
+            <!-- <a href="#"> 링크를 현재페이지로 막아놓은것. 나중에 연결해보기 -->
+        </header>
+        <!-- div.clear엔터 : float를 주었을 경우 해제해줄 영역을 부여-->
+        <div class="clear"></div>
+        <!-- 네이게이션 바: 메뉴 ---------------------------------->
+        <nav>
+            <!-- 네비영역 -->
+            <!-- ul>li>a엔터, li여러개 복사 -->
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Signup</a></li>
+                <li><a href="#">Signin</a></li>
+                <li><a href="#">Board</a></li>
+            </ul>
+        </nav>
+        <div class="clear"></div>
+        <!-- 컨텐츠 영역 : article, section-(float left할 예정)------ -->
+        <article>
+            <!-- 컨텐츠-->
+            <section>
+                <h1>공지사항</h1>
+                <p>
+                    어쩌구 저쩌구... <br>
+                    어쩌구 저쩌구... <br>
+                    어쩌구 저쩌구... 
+                </p>
+            </section>
+            <section>
+                <h1>베스트 글</h1>
+                <p>
+                    어쩌구 저쩌구... <br>
+                    어쩌구 저쩌구... <br>
+                    어쩌구 저쩌구... 
+                </p>
+            </section>
+            <section>
+                <h1>공지사항2</h1>
+                <p>
+                    어쩌구 저쩌구... <br>
+                    어쩌구 저쩌구... <br>
+                    어쩌구 저쩌구... 
+                </p>
+            </section>
+            <section>
+                <h1>공지사항3</h1>
+                <p>
+                    어쩌구 저쩌구... <br>
+                    어쩌구 저쩌구... <br>
+                    어쩌구 저쩌구... 
+                </p>
+            </section> 
+                <!-- article> section>제목은  h 내용은 p 문단태그로 감싼다 -->
+    
+        </article>
+        <!-- 사이드 영역 -(float right할 예정)------------------------ -->
+        <aside> 
+            <!-- 사이드 -->
+            <nav>
+<!-- ul>li>a -->
+                <ul>
+                    <li><a href="#">Menu1</a></li>
+                    <li><a href="#">Menu2</a></li>
+                    <li><a href="#">Menu3</a></li>
+                    <li><a href="#">Menu4</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="clear"></div>
+        <!-- 푸터 영역 -------------------------------------- -->
+        <footer>
+            &copy;Copyright/회사소개
+        </footer>
+    </div><!-- #wrap .container end -->
+</body>
+</html>
+
+<!-- 45시맨틱레이아웃.html 
+시맨틱태그 레이아웃 적용하기-->
+
+<!-- 네이버 
+칼스펜 검색
+td td 70퍼 20퍼 테이블
+-> div float left float right
+
+헤더 콘텐츠 사이드 푸터 div
+
+div에 id나 class이름 주는 방법
+
+div인데 의미있는 태그=시맨틱태그
+header 
+article :콘텐츠영역
+footer 등
+-->
+<!--  기본틀
+ <div id="wrap" class="countainer"> 
+        <header>
+            헤더 영역
+        </header>
+        <div class="clear"></div>
+        <nav>네비영역
+        </nav>
+        <div class="clear"></div>
+        <article>
+            컨텐츠
+        </article>
+        <aside> 사이드
+            <nav>
+            </nav>
+        </aside>
+        <div class="clear"></div>
+        <footer>
+            &copy;Copyright/회사소개
+        </footer>
+    </div>
+
+ -->

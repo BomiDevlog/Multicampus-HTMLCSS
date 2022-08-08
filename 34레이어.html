@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34레이어.html</title>
+    <style>
+        body{
+            padding: 20px;
+        }
+        div:not(#root){
+            /* background-color: aqua; 직관적으로 보려고 임의의 배경색을 주었던 것.*/
+            width: 100px;
+            height: 100px;
+        }
+        .z-1{
+            background-color: aquamarine;
+            position: absolute; 
+            /*부모위치를 기준으로함 
+            부모의 포지션이 position:relative가 아니라면 body를 기준으로 움직임
+            / absolute한 후에 z-2가 가려짐*/
+            left:50px; /*x좌표*//*위치를 이동하니 뒤로 가려진 z-2가 보임*/
+            top:50px;/*y좌표*//*왼쪽에서 50px멀어지고  위에서ㅏ  50px멀어짐(내려감)*/
+            z-index: 9; /*z index의 값이 클수록 레이어 계층의 위로 올라간다*/
+        }
+        .z-2{
+            background-color: gold;
+            position: absolute;/*부모요소를 기주으로 좌표를 잡는다*/ 
+            left:80px;/*x좌표*/
+            top:80px;/*y좌표*/
+            z-index: 8;
+        }
+        .z-3{
+            background-color: #336644;
+            position: absolute;/*부모요소를 기주으로 좌표를 잡는다*/ 
+            left:110px;/*x좌표*/
+            top:110px;/*y좌표*/
+            z-index: 7;
+        }
+        .z-4{
+            background-color: #ffffcc;
+            position: absolute;/*부모요소를 기주으로 좌표를 잡는다*/ 
+            left:140px;/*x좌표*/
+            top:140px;/*y좌표*/
+        }
+        /* position:static(기본값) 
+        =>z-index가 없을 경우, 뒤에 쓸수록 위로 올라옴 */
+    </style>
+</head>
+<body>
+    <h1>레이어를 구성해보자.</h1>
+    <div id="root" style="position:relative"> 
+        <!-- "border: thick solid red; position:relative" -->
+        <!-- 부모 root div의 포지션이 position:relative이 되니 레이어 z-1이 기준으로 해서 이동함  -->
+	  <div id="" class="z-1">
+		 레이어: z-1
+	  </div>
+	  <div id="" class="z-2">
+		 레이어: z-2
+	  </div>
+	  <div id="" class="z-3">
+		 레이어: z-3
+	  </div>
+	  <div id="" class="z-4">
+		 레이어: z-4
+	  </div>
+  </div>
+
+  <!-- 질문있습니다! 레이어구조에서 부모div인 root안에 div4개가 있는데 왜 부모안에 있지 않아요?? -->
+
+</body>
+</html>

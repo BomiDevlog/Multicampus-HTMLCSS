@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>40important.html</title>
+    <!-- 선택자가 충돌났을 때 우선순위 -->
+    <style>
+        p{color:red !important}/*p태그보다 아이디선택자가 더 높지만, important를 붙여주면 중요해서 적용됨*/
+        #thing{color:pink}/*아이디선택자가가 더 우선순위 높다*/
+        div.food{color:blue}
+        div.food{color:chocolate}
+        /* 동일한 조건일때 아래의 것이 적용됨 */
+        .food{ color:aqua} /*더 구체적으로 기술한  div.food의 조건이 적용*/
+        div{
+            color:yellow;
+        }/*태그선택자보다 클래스선택자가 우선순위가 높다*/
+    </style>
+</head>
+<body>
+    <p id="thing">Will be Red</p>
+    <div class="food">Will be Chocolate</div>
+</body>
+</html>

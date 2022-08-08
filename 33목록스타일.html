@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>33목록스타일.html</title>
+    <style>
+        /* (간단 예제) .menu > li 에 대해 아래와 같이 스타일정의하기
+	   - 폭:120px  높이:25px
+	   - 배경색: lightblue;
+	   - 마진: 3px
+	   - 패딩: 10px
+	   - 글자색: 알아서
+	   - 서체: Helvetica, sans-serif
+	   - 글자크기 : 13px;
+	   - 글자정렬: 중앙에 오도록 */
+    .menu>li{
+        float:left; /*레이아웃끌어당김. float하면 아래에도 영향주는걸 고려해야함*/
+        /*list-style: none;*//* 네모 기호를 없애서 깔끔.//글머리 기호 유형: list-style-type으로 접근해도 같다*/
+        list-style-position:inside;/*글머리기호가 네모칸안에 들어가 깔끔*/
+        width: 120px;
+        height: 25px;
+        background-color: lightblue;
+        margin: 3px;
+        padding: 10px;
+        color: navy;
+        font-family: Helvetica, sans-serif;
+        font-size: 13px;
+        text-align: center;
+    }
+
+
+    </style>
+</head>
+<body>
+    <h1>목록스타일</h1>
+    <!-- ul>li*4엔터 -->
+    <ul style="list-style-type: circle; list-style-image:url(images/square.png);list-style-position:inside">
+        <!-- 이미지가 목록표시에 적용됨. -->
+        <!--"list-style-type: square, circle, none;"-->
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JAVA</li>
+        <li>SQL</li>
+    </ul>
+    <hr>
+    <ol style="list-style-type:upper-roman">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JAVA</li>
+        <li>SQL</li>
+    </ol>
+    <hr>
+    <ul class="menu">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JAVA</li>
+        <li>SQL</li>
+    </ul>
+    <hr style="clear: left"> 
+    <!-- flaot를 걸고나면 반드시 다음 부분에서 해제를 해야 레이아웃이 마무리됨! 주의! -->
+</body>
+</html>
