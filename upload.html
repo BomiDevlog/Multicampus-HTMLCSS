@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>하이퍼링크.html</title>
+    </head>
+    <body>
+        <h1>텍스트에 링크를 걸어봅시다.</h1>
+        <a href="http://www.naver.com">네이버</a>
+        <a href="http://www.google.com">구글</a> <!--해당창에서 바로 열림-->
+        <a href="http://www.daum.net" target="_blank">다음</a> <!-- 새로운 탭에서 열림-->
+        <hr color="green">
+
+        <a href="01html시작.html">내가 만든 문서1</a>
+         <!--같은 경로에 있으면 파일명만 적어줌-->
+        <a href="sample/test.html">내가 만든 test.html</a>
+         <!-- 상대경로로 설정: 
+            현재 작성한 파일이 있는 곳을 기준으로 접근하는 방식
+            .      : 현재디렉토리를 의미
+            ..     : 현재보다 한 단계 상위를 의미 
+            ../../ : 현재보다 2단계 상위를 의미-->
+        <hr>
+        <a href="file:///C:/HTML/sample/test.html" target="_blank">test.html로 가기</a>
+         <!--절대경로 방식-->
+    </body>
+
+</html>
